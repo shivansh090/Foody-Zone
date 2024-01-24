@@ -5,8 +5,7 @@
 /.pnp
 .pnp.js
 /gitaway.txt
-/src/components
-/src/utils/sample.js
+
 
 # testing
 /coverage

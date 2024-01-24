@@ -1,10 +1,29 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
+import SearchResult from './components/SearchResult';
 import foodData from './utils/sample'
 
 
 const App = () => {
-  
+  const [data, setdata] = useState(foodData);
+  console.log(foodData);
+  const [filteredData, setFilteredData] = useState(foodData);
+
+  const searchFood = (event) => {
+    const searchValue = event.target.value;
+    const filter = data?.filter((food) =>
+      food.name.toLowerCase().includes(searchValue.toLowerCase()) ||
+      food.text.toLowerCase().includes(searchValue.toLowerCase())
+    )
+    setFilteredData(filter);
+  };
+  const clicked = (event) => {
+    const item = event.target.id;
+    const filter = data?.filter((food) =>
+      food.type.toLowerCase().includes(item.toLowerCase())
+    )
+    setFilteredData(filter);
+  }
   return (
     <div>
       <Container>
@@ -13,16 +32,16 @@ const App = () => {
             <img src='logo.svg' alt='logo' />
           </div>
           <div className='search'>
-            <input  type='text' placeholder='Search Food' />
+            <input onChange={searchFood} type='text' placeholder='Search Food' />
           </div>
         </TopContainer>
         <FilterContainer>
-          <button id='' >All</button>
-          <button id='breakfast' >Breakfast</button>
-          <button id='lunch' >Lunch</button>
-          <button id='dinner' >Dinner</button>
+          <button id='' onClick={clicked}>All</button>
+          <button id='breakfast' onClick={clicked}>Breakfast</button>
+          <button id='lunch' onClick={clicked}>Lunch</button>
+          <button id='dinner' onClick={clicked}>Dinner</button>
         </FilterContainer>
-        
+        <SearchResult data={filteredData} />
       </Container>
     </div>
   );
