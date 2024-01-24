@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.872846f1.css",
-    "main.js": "/static/js/main.a2127113.js",
-    "index.html": "/index.html",
-    "main.872846f1.css.map": "/static/css/main.872846f1.css.map",
-    "main.a2127113.js.map": "/static/js/main.a2127113.js.map"
+    "main.css": "/https//shivansh090.github.io/Foody-Zone/static/css/main.872846f1.css",
+    "main.js": "/https//shivansh090.github.io/Foody-Zone/static/js/main.6fb8675e.js",
+    "index.html": "/https//shivansh090.github.io/Foody-Zone/index.html",
+    "main.872846f1.css.map": "/https//shivansh090.github.io/Foody-Zone/static/css/main.872846f1.css.map",
+    "main.6fb8675e.js.map": "/https//shivansh090.github.io/Foody-Zone/static/js/main.6fb8675e.js.map"
   },
   "entrypoints": [
     "static/css/main.872846f1.css",
-    "static/js/main.a2127113.js"
+    "static/js/main.6fb8675e.js"
   ]
 }
